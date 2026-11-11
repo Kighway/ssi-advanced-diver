@@ -1,0 +1,30 @@
+name: Test and build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  container:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Build container and run all tests
+        run: docker build --progress=plain -t compass-lab:test .
+      - name: Verify platform port and health endpoint
+        run: |
+          docker run -d --name compass-smoke -e PORT=8080 -p 127.0.0.1:8080:8080 compass-lab:test
+          trap 'docker logs compass-smoke; docker rm -f compass-smoke' EXIT
+          timeout 60 sh -c 'until curl --fail --silent http://127.0.0.1:8080/_stcore/health; do sleep 2; done'

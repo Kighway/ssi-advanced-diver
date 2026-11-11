@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Compass responsive verification</title>
+<style>html,body {margin:0;padding:0;background:white;} iframe {display:block;border:0;}</style>
+</head><body>
+<!-- A real iframe browsing context gives Streamlit the selected CSS viewport.
+     This harness does not alter the application or emulate its HTML. -->
+<iframe title="Compass Geometry Laboratory" src="http://127.0.0.1:8501/" width="1280" height="1620"></iframe>
+<script>
+const views = {desktop:[1280,1620],tablet:[768,2000],mobile:[390,2800],
+  rectangle_desktop:[1280,4600],rectangle_mobile:[390,8000]};
+const [width,height] = views[new URLSearchParams(location.search).get('view')] || views.desktop;
+const frame = document.querySelector('iframe');
+frame.width = width; frame.height = height;
+</script></body></html>

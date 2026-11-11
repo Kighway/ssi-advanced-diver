@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-11",
+  "browser": "Chromium",
+  "method": "Actual Streamlit UI in fixed-width browser iframe contexts; DOM and SVG observations",
+  "checks": [
+    {
+      "check": "default scenario",
+      "stats": [
+        "120.0 s",
+        "120 m",
+        "21.16 m",
+        "150.0°"
+      ],
+      "passed": true
+    },
+    {
+      "check": "bidirectional current speed and drift calibration",
+      "speedFromDrift": 0.36397,
+      "driftFromSpeed": 26.57,
+      "passed": true
+    },
+    {
+      "check": "heading change preserves world current",
+      "heading": 100,
+      "currentBearing": 150,
+      "passed": true
+    },
+    {
+      "check": "explicit relative-current mode",
+      "heading": 100,
+      "currentBearing": 190,
+      "passed": true
+    },
+    {
+      "check": "current disabled produces identical rendered route paths and zero displacement",
+      "passed": true
+    },
+    {
+      "check": "actual-track layer hides independently",
+      "passed": true
+    },
+    {
+      "check": "Mobile heading entry at 359°",
+      "passed": true,
+      "headings": [
+        "359°",
+        "089°",
+        "179°",
+        "269°"
+      ],
+      "worldCurrentBearing": 150
+    },
+    {
+      "check": "390 px mobile layout and current-off closure",
+      "passed": true,
+      "bounds": {
+        "bottom": 6052.125,
+        "overflow": 0,
+        "plot": {
+          "bottom": 4812.515625,
+          "height": 560,
+          "left": 13.59375,
+          "right": 376.40625,
+          "top": 4252.515625,
+          "width": 362.8125,
+          "x": 13.59375,
+          "y": 4252.515625
+        },
+        "top": 2716.6875,
+        "width": 390
+      }
+    },
+    {
+      "check": "1280 px desktop capture and layout",
+      "passed": true,
+      "bounds": {
+        "bottom": 3693.078125,
+        "overflow": 0,
+        "plot": {
+          "bottom": 2973.453125,
+          "height": 560,
+          "left": 35.1875,
+          "right": 1244.8125,
+          "top": 2413.453125,
+          "width": 1209.625,
+          "x": 35.1875,
+          "y": 2413.453125
+        },
+        "top": 1618.21875,
+        "width": 1280
+      }
+    }
+  ]
+}

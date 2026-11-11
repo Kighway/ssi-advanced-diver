@@ -1,0 +1,171 @@
+{
+  "checked_on": "2026-11-11",
+  "method": "Chromium UI with real Streamlit sessions; iframe browsing contexts at 1280px, 768px and 390px for responsive checks; pointer drag and keyboard input in the main tab.",
+  "checks": [
+    {
+      "heading": 0,
+      "values": [
+        "180°",
+        "090°",
+        "180°",
+        "360°"
+      ],
+      "slider": 0,
+      "passed": true
+    },
+    {
+      "heading": 90,
+      "values": [
+        "270°",
+        "000°",
+        "090°",
+        "270°"
+      ],
+      "slider": 90,
+      "passed": true
+    },
+    {
+      "heading": 180,
+      "values": [
+        "000°",
+        "N/A",
+        "000°",
+        "180°"
+      ],
+      "slider": 180,
+      "passed": true
+    },
+    {
+      "heading": 270,
+      "values": [
+        "090°",
+        "N/A",
+        "N/A",
+        "090°"
+      ],
+      "slider": 270,
+      "passed": true
+    },
+    {
+      "heading": 359,
+      "values": [
+        "179°",
+        "N/A",
+        "N/A",
+        "001°"
+      ],
+      "slider": 359,
+      "passed": true
+    },
+    {
+      "check": "slider keyboard updates numeric input",
+      "passed": true
+    },
+    {
+      "check": "reciprocal layer independently toggles",
+      "passed": true
+    },
+    {
+      "check": "bezel, square and cross-current exercises render correctly",
+      "passed": true
+    },
+    {
+      "check": "desktop viewport",
+      "width": 1280,
+      "height": 1500,
+      "passed": true
+    },
+    {
+      "check": "390px mobile layout, numeric input and reset",
+      "boxes": [
+        {
+          "left": 13.59375,
+          "right": 190.5
+        },
+        {
+          "left": 199.5,
+          "right": 376.40625
+        },
+        {
+          "left": 13.59375,
+          "right": 190.5
+        },
+        {
+          "left": 199.5,
+          "right": 376.40625
+        },
+        {
+          "left": 29.59375,
+          "right": 360.40625
+        },
+        {
+          "left": 29.59375,
+          "right": 360.40625
+        },
+        {
+          "left": 29.59375,
+          "right": 360.40625
+        },
+        {
+          "left": 13.59375,
+          "right": 376.40625
+        }
+      ],
+      "scrollWidth": 390,
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "768px tablet layout",
+      "boxes": [
+        {
+          "left": 35.1875,
+          "right": 377
+        },
+        {
+          "left": 391,
+          "right": 732.8125
+        },
+        {
+          "left": 35.1875,
+          "right": 377
+        },
+        {
+          "left": 391,
+          "right": 732.8125
+        },
+        {
+          "left": 51.1875,
+          "right": 421.546875
+        },
+        {
+          "left": 51.1875,
+          "right": 421.546875
+        },
+        {
+          "left": 51.1875,
+          "right": 421.546875
+        },
+        {
+          "left": 501.546875,
+          "right": 732.8125
+        }
+      ],
+      "scrollWidth": 768,
+      "width": 768,
+      "passed": true
+    },
+    {
+      "check": "pointer drag updates heading, calculations and SVG paths on release",
+      "heading": 163,
+      "numeric": 163,
+      "values": [
+        "343°",
+        "N/A",
+        "017°",
+        "197°"
+      ],
+      "passed": true
+    }
+  ]
+}

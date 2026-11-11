@@ -1,0 +1,16 @@
+.git
+.venv
+__pycache__
+**/__pycache__
+.pytest_cache
+*.pyc
+.DS_Store
+.env
+.env.*
+.streamlit/secrets.toml
+screenshots
+verification
+*.zip
+README.md
+VERIFICATION.md
+DEPLOYMENT.md
